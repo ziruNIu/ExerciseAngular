@@ -1,4 +1,5 @@
 #all {
+    font: normal;
     display: flex; 
     box-sizing: border-box;
     height: 100%;
@@ -7,7 +8,13 @@
 .leftImage{
     width: 30%;
     height: 100%;
+    overflow-x: scroll;
 }
+.leftImage > img {
+    height: 100%;
+    transform: translateX(-2210px); 
+}
+
 .rightBlock{
     position: relative;
     display: flex;
@@ -17,6 +24,8 @@
 }
 .connection{
     width: 70%;
+    display: flex;
+    justify-content: center;
 }
 .logo{
     position: absolute;
