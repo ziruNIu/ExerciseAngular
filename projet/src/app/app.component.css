@@ -1,0 +1,25 @@
+#all {
+    display: flex; 
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+.leftImage{
+    width: 30%;
+    height: 100%;
+}
+.rightBlock{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.connection{
+    width: 70%;
+}
+.logo{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
