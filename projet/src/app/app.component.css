@@ -8,7 +8,7 @@
 .leftImage{
     width: 30%;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 .leftImage > img {
     height: 100%;
