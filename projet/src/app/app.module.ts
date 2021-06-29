@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { HeaderComponent } from './header/header.component';
-import { OuvrageComponent } from './ouvrage/ouvrage.component';
+import { ProductComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DetailComponent } from './detail/detail.component';
@@ -19,7 +19,7 @@ import { DetailComponent } from './detail/detail.component';
     ConnectionComponent,
     CheckboxComponent,
     HeaderComponent,
-    OuvrageComponent,
+    Component,
     DetailComponent
   ],
   imports: [

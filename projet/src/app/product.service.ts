@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { DATA } from './products';
+import { DATA } from 'src/data';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
+  getProducts(): Observable<any[]>{
+    return of(DATA); 
+  }
   constructor() { }
-  getProduct(id:Number): Observable
 }
