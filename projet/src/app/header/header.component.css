@@ -1,10 +1,22 @@
 #iconeUser{
-    float: right;
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    right: 4px;
+    top: 20px;  
 }
 
-#head{
-    display: inline;
+#head1{
+    display: flex;
     width:100%;
-    border-bottom: 1px;
-    height: 15px;
+    border-bottom: 1px solid black;
+    height: 80px;
+}
+
+.leftLogo{
+    position: absolute;
+    height: 40px;
+    width: 80px;
+    left: 10px;
+    top: 10px;    
 }

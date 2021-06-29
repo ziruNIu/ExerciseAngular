@@ -6,8 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class OuvragesService {
-  getOuvrages(): Observables <Variable>{
-  
+  getOuvrages(): Observables<Object[]>{
+    const products = of(DATA);
+    return products; 
   }
   constructor() { }
 }
