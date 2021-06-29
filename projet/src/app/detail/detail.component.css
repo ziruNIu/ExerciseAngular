@@ -1,0 +1,20 @@
+.all{
+    display: flex;
+    background-color: white;
+
+}
+.left{
+    width: 300px;
+    word-wrap: break-word;
+    text-align: right;
+
+}
+.right{
+    width: 50px;
+    word-wrap: break-word;
+}
+.list{
+    box-sizing: border-box;
+    padding: 20px  20px;
+
+}

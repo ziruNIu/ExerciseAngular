@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectionComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
