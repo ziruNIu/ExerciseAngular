@@ -1,36 +1,85 @@
 <div class='all'>
-    <div class="leftBlock">
-        <div class="list reference">
-            <div class='left'>Ref.Ouvrage</div>
-            <div class='right'></div>
+    <div class="topBlock">
+        <div class="leftBlock">
+            <div class="list reference">
+                <div class='left'>Ref.Ouvrage</div>
+                <div class='right'>
+                    {{refOuvrage}}
+                </div>
+            </div>
+            <div class="list libelle"> 
+                <div class='left'>Libelle</div>
+                <div class='right'>
+                    {{libelle}}
+                </div>
+            </div>
+            <div class="middleLine">
+                <hr size="" color = "black" >
+            </div>     
+            <div class="list group">
+                <div class='left'>Groupe</div>
+                <div class='right'>
+                    {{group}}
+                </div>
+            </div>  
+            <div class="list family">
+                <div class='left'>Famille</div>
+                <div class='right'>
+                    {{family}}
+                </div>
+            </div>   
+            <div class="list subFamily">
+                <div class='left'>Sous-famille</div>
+                <div class='right'>
+                    {{subFamily}}
+                </div>
+            </div>   
         </div>
-        <div class="list libelle"> 
-            <div class='left'>Libelle</div>
-            <div class='right'></div>
+        <div class="rightImage">
+            <img src="https://gaia.fantasiapp.tech/resources/images/Visuels_Systemes/Placo/7E3626CAEE464DD5A1C169DB2DE30A5D_72-48.png" alt="">
         </div>
-        <div class="middleLine">
-        </div>     
-        <div class="list group">
-            <div class='left'>Groupe</div>
-            <div class='right'></div>
-        </div>  
-        <div class="list family">
-            <div class='left'>Famille</div>
-            <div class='right'></div>
-        </div>   
-        <div class="list subFamily">
-            <div class='left'>Sous-famille</div>
-            <div class='right'></div>
-        </div>   
     </div>
-    <div class="rightImage"></div>
-    <!-- <div *ngIf="onShow";then showBlock else hideBlock></div> -->
-    <ng-template #showBlock>
-        <span>Masquer les documents associes</span>
-        <div class="line"></div>
-        <div class="detailInformation"></div>
-    </ng-template>
-    <ng-template #hideBlock>
-        <span>Masquer les documents associes</span>
-    </ng-template>
+    <div class="bottomBlock">
+        <div *ngIf="onShow; then showBlock else hideBlock"></div>
+        <ng-template #showBlock>
+            <button class="hide" (click)="onShowChange()">Masquer les documents associes</button>
+            <div class="line">
+                <hr size="" color = "black" >
+            </div>
+            <div class="includeInformation">
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+                <div class="detailInformation">
+                    <div class="rectangle"></div>
+                    <span belowRectangle>???</span>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template #hideBlock>
+            <button class="hide" (click)="onShowChange()">Afficher les documents associes</button>
+
+        </ng-template>
+    </div>
 </div>
