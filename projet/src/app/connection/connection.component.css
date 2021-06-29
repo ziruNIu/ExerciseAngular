@@ -1,4 +1,38 @@
 
+#all {
+    font: normal;
+    display: flex; 
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+.leftImage{
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.leftImage > img {
+    height: 100%;
+    transform: translateX(-2210px); 
+}
+
+.rightBlock{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+/* .connection{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+} */
+.logo{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
 .connection {
     position:relative;
     display: flex;
