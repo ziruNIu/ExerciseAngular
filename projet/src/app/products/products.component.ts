@@ -6,7 +6,7 @@ import { ProductService } from '../product.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductsComponent implements OnInit {
   Products;
   constructor(service: ProductService) { 
     this.Products = service.getProducts();
