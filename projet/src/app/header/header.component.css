@@ -1,0 +1,10 @@
+#iconeUser{
+    float: right;
+}
+
+#head{
+    display: inline;
+    width:100%;
+    border-bottom: 1px;
+    height: 15px;
+}
