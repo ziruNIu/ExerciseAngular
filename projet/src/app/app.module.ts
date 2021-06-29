@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { OuvrageComponent } from './ouvrage/ouvrage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     ConnectionComponent,
     CheckboxComponent,
     HeaderComponent,
-    OuvrageComponent
+    OuvrageComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

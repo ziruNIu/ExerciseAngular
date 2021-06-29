@@ -1,0 +1,36 @@
+<div class='all'>
+    <div class="leftBlock">
+        <div class="list reference">
+            <div class='left'>Ref.Ouvrage</div>
+            <div class='right'></div>
+        </div>
+        <div class="list libelle"> 
+            <div class='left'>Libelle</div>
+            <div class='right'></div>
+        </div>
+        <div class="middleLine">
+        </div>     
+        <div class="list group">
+            <div class='left'>Groupe</div>
+            <div class='right'></div>
+        </div>  
+        <div class="list family">
+            <div class='left'>Famille</div>
+            <div class='right'></div>
+        </div>   
+        <div class="list subFamily">
+            <div class='left'>Sous-famille</div>
+            <div class='right'></div>
+        </div>   
+    </div>
+    <div class="rightImage"></div>
+    <!-- <div *ngIf="onShow";then showBlock else hideBlock></div> -->
+    <ng-template #showBlock>
+        <span>Masquer les documents associes</span>
+        <div class="line"></div>
+        <div class="detailInformation"></div>
+    </ng-template>
+    <ng-template #hideBlock>
+        <span>Masquer les documents associes</span>
+    </ng-template>
+</div>
