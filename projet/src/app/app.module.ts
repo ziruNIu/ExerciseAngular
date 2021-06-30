@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     CheckboxComponent,
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     DetailComponent,
     ProductsComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

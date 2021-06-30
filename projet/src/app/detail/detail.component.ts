@@ -11,6 +11,7 @@ export class DetailComponent implements OnInit {
   group?: string;
   family?: string;
   subFamily?: string;
+  image?: string;
   onShow = true;
   onShowChange():void{
     this.onShow = !this.onShow
@@ -22,6 +23,7 @@ export class DetailComponent implements OnInit {
     this.family = "Cloisons de distribution parements simples BA13 - BA15";
     this.subFamily = "Cloisons de distribution 60/36 THD";
     this.onShow = true;
+    this.image = "https://gaia.fantasiapp.tech/resources/images/Visuels_Systemes/Placo/7E3626CAEE464DD5A1C169DB2DE30A5D_72-48.png";
 
   }
 
