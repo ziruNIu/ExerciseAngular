@@ -9,6 +9,9 @@ export class ProductService {
   getProducts(): Observable<any[]>{
     return of(DATA); 
   }
+  getProduct(id:number): Observable<any>{
+    return of(DATA[id])
+  }
   // getProducts(){
   //   return DATA; 
   // }
