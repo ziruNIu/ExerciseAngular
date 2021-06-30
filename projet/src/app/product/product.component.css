@@ -19,12 +19,12 @@
     justify-content: center;
     align-items: center;
 }
-/* img{
-    width: 30%;
-    height: 30%;
+img{
+    width: 50%;
+    height: 50%;
     margin: auto;
-} */
+}
 .libelle{
     margin-bottom: 40px;
-    width:50%;
+    width: 200px;
 }

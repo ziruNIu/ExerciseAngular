@@ -1,8 +1,57 @@
-#boxElement{
-    display: block;
-    width: 200px;
-    height: 200px;    
+#resumeDescrip{
+    height: 300px;
+    width: 85%;
+    display:block;
+    justify-content: center;
+    flex-direction: column;
 }
-mat-grid-tile {
-    background: rgb(230, 210, 173);
-  }
+mat-grid-tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    border: solid;
+    background-color: yellowgreen;
+
+}
+​
+#imgProduct{
+    height: 100px;
+    width: 150px;
+    margin: auto;
+}
+​
+#firstview{
+    height: 200px;
+    width: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+​
+.price{
+    position: absolute;
+    left: 60px;
+    top: 240px;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+​
+h3{
+    color: rgb(0, 81, 255);
+    font-weight: 400;
+}
+​
+p{
+    text-align: center;
+}
+app-product{
+    width: 500px;
+    height: 500px;
+}
