@@ -13,6 +13,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductComponent } from './product/product.component';
+import { AfterLogInComponent } from './after-log-in/after-log-in.component';
 @NgModule({
   declarations: [
     CheckboxComponent,
@@ -23,6 +24,7 @@ import { ProductComponent } from './product/product.component';
     DetailComponent,
     ProductsComponent,
     ProductComponent,
+    AfterLogInComponent,
   ],
   imports: [
     BrowserModule,
