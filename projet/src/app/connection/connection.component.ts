@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnectionComponent implements OnInit {
   isStayConnected: boolean = false;
-  userName = "Mao"
+  userName?: string;
   constructor() { }
   ngOnInit(): void {
   }
