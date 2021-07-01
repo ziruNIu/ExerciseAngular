@@ -1,14 +1,21 @@
-<div class="all">
-    <div class="topImage">
-        <img src={{image}} alt="">
-
+<app-header></app-header>
+<div class="bigBox">
+    <!-- <p>{{products.length}} résultats</p> -->
+    <div style="width: 90%; position:absolute; top: 120px">
+        <mat-grid-list cols="5" rowHeight=300>
+            <mat-grid-tile *ngFor="let product of products">
+                <div id="resumeDescrip" [routerLink]="['/products', product.id]">
+                    <div id="firstview">
+                        <img id="imgProduct" src= "https://gaia.fantasiapp.tech/{{ product.photoUrl }}">
+                        <h1></h1>
+                        <h1></h1>
+                        <p>{{ product.name }}</p>
+                    </div>
+                    <div class="price">
+                        <h3>prix de vente HT mini {{ product.myTotal.toFixed(2)}}  &euro;</h3>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
     </div>
-    <div class="libelle">
-        {{libelle}}
-    </div>
-    <div class="price">
-        <span>Prix de vente HT mini</span>
-        {{price}}
-    </div>
-
 </div>

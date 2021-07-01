@@ -1,85 +1,91 @@
-<div class='all'>
-    <div class="topBlock">
-        <div class="leftBlock">
-            <div class="list reference">
-                <div class='left'>Ref.Ouvrage</div>
-                <div class='right'>
-                    {{refOuvrage}}
+<div class="bigBox">
+    <div style="width: 75%; position:absolute; top: 120px">
+        <div class='all'>
+            <div class="topBlock">
+                <div id="descript">
+                    <div class="leftBlock">
+                        <div class="list reference">
+                            <div class='left'><strong>Ref.Ouvrage</strong></div>
+                            <div class='right'>
+                                {{products[id].BIMid}}
+                            </div>
+                        </div>
+                        <div class="list libelle"> 
+                            <div class='left'><strong> Libelle</strong></div>
+                            <div class='right'>
+                                {{ products[id].name }}
+                            </div>
+                        </div>
+                        <div class="middleLine">
+                            <hr size="" color = "black" >
+                        </div>     
+                        <div class="list group">
+                            <div class='left'><strong>Groupe</strong></div>
+                            <div class='right'>
+                                {{ products[id].group }}
+                            </div>
+                        </div>  
+                        <div class="list family">
+                            <div class='left'><strong>Famille</strong></div>
+                            <div class='right'>
+                                {{ products[id].category }}
+                            </div>
+                        </div>   
+                        <div class="list subFamily">
+                            <div class='left'><strong>Sous-famille</strong></div>
+                            <div class='right'>
+                                {{products[id].subcategory}}
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="rightImage">
+                        <img src= "https://gaia.fantasiapp.tech/{{ products[id].photoUrl }}" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="list libelle"> 
-                <div class='left'>Libelle</div>
-                <div class='right'>
-                    {{libelle}}
-                </div>
-            </div>
-            <div class="middleLine">
-                <hr size="" color = "black" >
-            </div>     
-            <div class="list group">
-                <div class='left'>Groupe</div>
-                <div class='right'>
-                    {{group}}
-                </div>
-            </div>  
-            <div class="list family">
-                <div class='left'>Famille</div>
-                <div class='right'>
-                    {{family}}
-                </div>
-            </div>   
-            <div class="list subFamily">
-                <div class='left'>Sous-famille</div>
-                <div class='right'>
-                    {{subFamily}}
-                </div>
-            </div>   
-        </div>
-        <div class="rightImage">
-            <img src={{image}} alt="">
-        </div>
-    </div>
-    <div class="bottomBlock">
-        <div *ngIf="onShow; then showBlock else hideBlock"></div>
-        <ng-template #showBlock>
-            <button class="hide" (click)="onShowChange()">Masquer les documents associes</button>
-            <div class="line">
-                <hr size="" color = "black" >
-            </div>
-            <div class="includeInformation">
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-                <div class="detailInformation">
-                    <div class="rectangle"></div>
-                    <span belowRectangle>???</span>
-                </div>
-            </div>
-        </ng-template>
-        <ng-template #hideBlock>
-            <button class="hide" (click)="onShowChange()">Afficher les documents associes</button>
+            <div class="bottomBlock">
+                <div *ngIf="onShow; then showBlock else hideBlock"></div>
+                <ng-template #showBlock>
+                    <button class="hide" (click)="onShowChange()">Masquer les documents associes</button>
+                    <div class="line">
+                        <hr size="" color = "black" >
+                    </div>
+                    <div class="includeInformation">
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                        <div class="detailInformation">
+                            <div class="rectangle"></div>
+                            <span belowRectangle>???</span>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template #hideBlock>
+                    <button class="hide" (click)="onShowChange()">Afficher les documents associes</button>
 
-        </ng-template>
+                </ng-template>
+            </div>
+        </div>
     </div>
 </div>

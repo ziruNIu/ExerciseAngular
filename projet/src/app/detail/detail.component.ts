@@ -1,6 +1,7 @@
+import { ProductService } from './../product.service';
+import { ProductComponent } from './../product/product.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,39 +9,22 @@ import { ProductService } from '../product.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  product?:any
-  refOuvrage?: string;
-  libelle?: string;
-  group?: string;
-  family?: string;
-  subFamily?: string;
-  image?: string;
   onShow = true;
+  products: any[] = [];
+  id : number = 0;
+
   onShowChange():void{
     this.onShow = !this.onShow
   }
 
-  constructor(
-    private route: ActivatedRoute,
-    private productService: ProductService,
-  ) {}
-  getProduct():void{
-    const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.productService.getProduct(id - 1).subscribe(product => this.product = product)
-    this.libelle = this.product.name
-    // this.libelle = "Cloison Habito® 60/36 - 2 x 1 Habito® 13 - EI45 - 32dB - M36 simples 60cm - Hte maxi 2.65m";
-    this.refOuvrage = "P_A01.01.04.001.0.V20.1";
-    this.group = "Cloisons sur ossatures";
-    this.family = "Cloisons de distribution parements simples BA13 - BA15";
-    this.subFamily = "Cloisons de distribution 60/36 THD";
-    this.onShow = true;
-    this.image = "https://gaia.fantasiapp.tech/resources/images/Visuels_Systemes/Placo/7E3626CAEE464DD5A1C169DB2DE30A5D_72-48.png";
-  }
-
- 
+  constructor(private route: ActivatedRoute, private productService: ProductService) {}
   
   ngOnInit(): void {
-    this.getProduct();
+    this.productService.getProducts().subscribe(products => this.products = products);
+    this.route.paramMap
+      .subscribe(params => {
+        this.id = Number(params.get('id') as string) - 1;
+      });
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product',
@@ -7,13 +7,16 @@ import { Input } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() libelle ?: string;
-  @Input() image ?: string;
-  @Input() price ?: string;
-
-  constructor() { }
+  
+  products : any[] = [];
+  
+  constructor(private productService: ProductService){}
 
   ngOnInit(): void {
+    this.getProducts();
   }
 
+  getProducts(): void {
+    this.productService.getProducts().subscribe(products => this.products = products);
+  }  
 }

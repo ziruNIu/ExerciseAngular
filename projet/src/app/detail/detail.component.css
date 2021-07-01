@@ -4,16 +4,25 @@
 }
 .topBlock{
     display: flex;
+    box-shadow: 5px 5px 5px 5px blue;
+    margin: auto;
+}
+#descript{
+    width: 80%;
+    display: flex;
+    flex-direction:row;
+    margin: auto;
+    margin-top: 30px;
 }
 .leftBlock{
-    margin: 20px;
+    margin-top: 2px;
+    width: 70%;
 }
 .left{
     width: 300px;
     word-wrap: break-word;
     text-align: right;
     margin-right: 20px;
-
 }
 .right{
     width: 500px;
@@ -23,11 +32,10 @@
     display: flex;
     box-sizing: border-box;
     padding: 20px  20px;
-
 }
 .rightImage{
     display: flex;
-
+    width: 30%Q;
 }
 img{
     margin:auto;
@@ -38,6 +46,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 5px 5px 5px 5px blue ;
 }
 .hide{
     border: 0;
@@ -50,10 +59,11 @@ img{
     background-color: greenyellow;
 }
 .includeInformation{
-    margin: 20px;
+    width: 60%;
     display: flex;
     justify-content: space-around;
-
+    position: relative;
+    margin: auto;
 }
 .detailInformation{
     display: flex;
