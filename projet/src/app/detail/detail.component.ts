@@ -8,22 +8,24 @@ import { ProductService } from '../product.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  product?:any
-  refOuvrage?: string;
-  libelle?: string;
-  group?: string;
-  family?: string;
-  subFamily?: string;
-  image?: string;
-  onShow = true;
-  onShowChange():void{
-    this.onShow = !this.onShow
-  }
-
+  product:any;
+  refOuvrage: string = "";
+  libelle: string = "";
+  group: string = "";
+  family: string= "";
+  subFamily: string = "";
+  image: string = "";
+  onShowAssociateDocuments = true;
+  
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
   ) {}
+  
+  onShowAssociateDocumentsChange():void{
+    this.onShowAssociateDocuments = !this.onShowAssociateDocuments;
+  }
+
   getProduct():void{
     const id = Number(this.route.snapshot.paramMap.get('id'))
     this.productService.loadProducts();
@@ -34,7 +36,7 @@ export class DetailComponent implements OnInit {
     this.group = this.product.group;
     this.family = this.product.category;
     this.subFamily = this.product.subcategory;
-    this.onShow = true;
+    this.onShowAssociateDocuments = true;
     this.image = "https://gaia.fantasiapp.tech/" + this.product.photoUrl;
   }
 

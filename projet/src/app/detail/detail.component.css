@@ -1,31 +1,29 @@
 .all{
     background-color: white;
-
 }
-.topBlock{
+.top-container{
     display: flex;
 }
-.leftBlock{
+.left-container{
     margin: 20px;
 }
-.left{
+.property-name{
     width: 300px;
     word-wrap: break-word;
     text-align: right;
     margin-right: 20px;
-
 }
-.right{
+.property{
     width: 500px;
     word-wrap: break-word;
 }
-.list{
+.show-property-line{
     display: flex;
     box-sizing: border-box;
     padding: 20px  20px;
 
 }
-.rightImage{
+.right-image{
     display: flex;
 
 }
@@ -34,12 +32,12 @@ img{
     width: 80%;
     height: 80%;
 }
-.bottomBlock{
+.bottom-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.hide{
+button{
     border: 0;
     background-color: white;
     color:green;
@@ -49,13 +47,13 @@ img{
     height: 50px;
     background-color: greenyellow;
 }
-.includeInformation{
+.associate-documents-container{
     margin: 20px;
     display: flex;
     justify-content: space-around;
 
 }
-.detailInformation{
+.associate-document{
     display: flex;
     flex-direction: column;
     justify-content: center;

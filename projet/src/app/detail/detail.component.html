@@ -1,84 +1,84 @@
-<div class='all'>
-    <div class="topBlock">
-        <div class="leftBlock">
-            <div class="list reference">
-                <div class='left'>Ref.Ouvrage</div>
-                <div class='right'>
+<div class='container'>
+    <div class="top-container">
+        <div class="top-left-container">
+            <div class="show-property-line">
+                <div class='property-name'>Ref.Ouvrage</div>
+                <div class='property'>
                     {{refOuvrage}}
                 </div>
             </div>
-            <div class="list libelle"> 
-                <div class='left'>Libelle</div>
-                <div class='right'>
+            <div class="show-property-line"> 
+                <div class='property-name'>Libelle</div>
+                <div class='property'>
                     {{libelle}}
                 </div>
             </div>
-            <div class="middleLine">
+            <div class="middle-line">
                 <hr size="" color = "black" >
             </div>     
-            <div class="list group">
-                <div class='left'>Groupe</div>
-                <div class='right'>
+            <div class="show-property-line">
+                <div class='property-name'>Groupe</div>
+                <div class='property'>
                     {{group}}
                 </div>
             </div>  
-            <div class="list family">
-                <div class='left'>Famille</div>
-                <div class='right'>
+            <div class="show-property-line">
+                <div class='property-name'>Famille</div>
+                <div class='property'>
                     {{family}}
                 </div>
             </div>   
-            <div class="list subFamily">
-                <div class='left'>Sous-famille</div>
-                <div class='right'>
+            <div class="show-property-line">
+                <div class='property-name'>Sous-famille</div>
+                <div class='property'>
                     {{subFamily}}
                 </div>
             </div>   
         </div>
-        <div class="rightImage">
+        <div class="right-image">
             <img src={{image}} alt="">
         </div>
     </div>
-    <div class="bottomBlock">
-        <div *ngIf="onShow; then showBlock else hideBlock"></div>
-        <ng-template #showBlock>
-            <button class="hide" (click)="onShowChange()">Masquer les documents associes</button>
+    <div class="bottom-container">
+        <div *ngIf="onShowAssociateDocuments; then showAssociateDocuments else hideAssociateDocuments"></div>
+        <ng-template #showAssociateDocuments>
+            <button class="show" (click)="onShowAssociateDocumentsChange()">Masquer les documents associes</button>
             <div class="line">
                 <hr size="" color = "black" >
             </div>
-            <div class="includeInformation">
-                <div class="detailInformation">
+            <div class="associate-documents-container">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
-                <div class="detailInformation">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
-                <div class="detailInformation">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
-                <div class="detailInformation">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
-                <div class="detailInformation">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
-                <div class="detailInformation">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
-                <div class="detailInformation">
+                <div class="associate-document">
                     <div class="rectangle"></div>
                     <span belowRectangle>???</span>
                 </div>
             </div>
         </ng-template>
-        <ng-template #hideBlock>
-            <button class="hide" (click)="onShowChange()">Afficher les documents associes</button>
+        <ng-template #hideAssociateDocuments>
+            <button class="hide" (click)="onShowAssociateDocumentsChange()">Afficher les documents associes</button>
 
         </ng-template>
     </div>
