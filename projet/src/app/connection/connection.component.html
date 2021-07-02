@@ -1,8 +1,9 @@
 
-<div id="all">
-    <div class="leftImage" >
-    <img src="../assets/siniat-weather-defence-banner-1920x470.png"></div>
-    <div class="rightBlock">
+<div class="container">
+    <div class="left-image" >
+        <img src="../assets/siniat-weather-defence-banner-1920x470.png">
+    </div>
+    <div class="right-block">
         <img class="logo" src="../assets/siniat-logo.svg">
         <div class="connection">
             <h1 class="title">Se connecter</h1>
@@ -12,31 +13,14 @@
             <input class='input' type="text" id="login" [(ngModel)]="userName" placeholder="Saisir votre identifiant" value="">
             <div class="label-line">
                 <label class="label" for='password'>MOT DE PASSE</label>
-                <a id="lost-password">Mot de pass oublie</a>
+                <a class="lost-password">Mot de pass oublie</a>
             </div>
             
-            <input class='input' [(ngModel)]="userName" type="password" id="password" placeholder="********" value="">
+            <input class='input' type="password" id="password" placeholder="Saisir votre mot de passe" value="">
             <div class="stay-connected">
-                <app-checkbox  [(value)]="isStayConnected"> </app-checkbox><span class="text">Rester connecte</span>
+                <app-checkbox  [(value)]="isStayConnected"> </app-checkbox><span class="text-stay-connected">Rester connecte</span>
             </div>
-            <button id="continueButton" routerLink = "/afterLogIn/{{userName}}">Continue</button>
+            <button class="continue-button" routerLink = "/afterLogIn/{{userName}}">Continue</button>
         </div>
     </div>
 </div>
-<!-- <div class="connection">
-    <h1 class="title">Se connecter</h1>
-    <div class="label-line">
-        <label class="label" for='login'>PSEUDO</label>
-    </div>
-    <input class='input' type="text" id="login" placeholder="Saisir votre identifiant" value="">
-    <div class="label-line">
-        <label class="label" for='password'>MOT DE PASSE</label>
-        <a id="lost-password">Mot de pass oublie</a>
-    </div>
-    
-    <input class='input' type="password" id="password" placeholder="********" value="">
-    <div class="stay-connected">
-        <app-checkbox  [(value)]="isStayConnected"> </app-checkbox><span class="text">Rester connecte</span>
-    </div>
-    <button id="continueButton"><a routerLink="/ouvrages">Continue</a></button>
-</div> -->

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-after-log-in',
-  templateUrl: './after-log-in.component.html',
-  styleUrls: ['./after-log-in.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class AfterLogInComponent implements OnInit {
+export class main implements OnInit {
   userName: any; //????
   constructor(
     private route: ActivatedRoute,

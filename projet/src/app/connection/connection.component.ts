@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./connection.component.css']
 })
 export class ConnectionComponent implements OnInit {
-  isStayConnected: boolean = false;
-  userName = "Mao"
+  isStayConnected = false;
+  userName = "";
   constructor() { }
   ngOnInit(): void {
   }

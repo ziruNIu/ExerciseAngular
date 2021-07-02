@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 ​
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: 'app-selector',
+  templateUrl: './selector.component.html',
+  styleUrls: ['./selector.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class SelectorComponent implements OnInit {
   
   products : any[] = [];
   
@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit {
   }
 ​
   getProducts(): void {
-    this.productService.getProducts().subscribe(products => this.products = products);
+    this.productService.loadProducts();
+    this.products=this.productService.datajson;
   }  
 }

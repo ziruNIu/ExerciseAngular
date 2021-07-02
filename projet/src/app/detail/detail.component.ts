@@ -26,15 +26,16 @@ export class DetailComponent implements OnInit {
   ) {}
   getProduct():void{
     const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.productService.getProduct(id - 1).subscribe(product => this.product = product)
-    this.libelle = this.product.name
+    this.productService.loadProducts();
+    this.product = this.productService.getProduct(id - 1);
+    this.libelle = this.product.name;
     // this.libelle = "Cloison Habito® 60/36 - 2 x 1 Habito® 13 - EI45 - 32dB - M36 simples 60cm - Hte maxi 2.65m";
-    this.refOuvrage = "P_A01.01.04.001.0.V20.1";
-    this.group = "Cloisons sur ossatures";
-    this.family = "Cloisons de distribution parements simples BA13 - BA15";
-    this.subFamily = "Cloisons de distribution 60/36 THD";
+    this.refOuvrage = this.product.BIMid;
+    this.group = this.product.group;
+    this.family = this.product.category;
+    this.subFamily = this.product.subcategory;
     this.onShow = true;
-    this.image = "https://gaia.fantasiapp.tech/resources/images/Visuels_Systemes/Placo/7E3626CAEE464DD5A1C169DB2DE30A5D_72-48.png";
+    this.image = "https://gaia.fantasiapp.tech/" + this.product.photoUrl;
   }
 
  

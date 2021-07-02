@@ -1,19 +1,28 @@
 import { Injectable } from '@angular/core';
-import { DATA } from 'src/data';
+import {DATA}  from 'src/data';
 import { Observable, of } from 'rxjs';
 ​
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  getProducts(): Observable<any[]>{
-    return of(DATA); 
+  datajson: any = {};
+  constructor() {
+   }
+
+  private fetchProducts(): Observable<any[]>{
+    return of(DATA);
   }
-  getProduct(id:number): Observable<any>{
-    return of(DATA[id])
+
+  loadProducts() : void{
+    this.fetchProducts().subscribe(data => this.datajson = data)
   }
-  // getProducts(){
-  //   return DATA; 
-  // }
-  constructor() { }
+
+  getProduct(id:number): any{
+    return this.datajson[id]
+  }
+  getProductProperty(id:number, property:string): string{
+    return this.datajson[id] && this.datajson[id][property]
+  }
+ 
 }

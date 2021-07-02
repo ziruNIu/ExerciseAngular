@@ -7,13 +7,13 @@ import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { HeaderComponent } from './header/header.component';
-import { ProductsComponent } from './products/products.component';
+import { SelectorComponent } from './selector/selector.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductComponent } from './product/product.component';
-import { AfterLogInComponent } from './after-log-in/after-log-in.component';
+import { main } from './main/main.component';
 @NgModule({
   declarations: [
     CheckboxComponent,
@@ -22,9 +22,9 @@ import { AfterLogInComponent } from './after-log-in/after-log-in.component';
     DetailComponent,
     HeaderComponent,
     DetailComponent,
-    ProductsComponent,
+    SelectorComponent,
     ProductComponent,
-    AfterLogInComponent,
+    main,
   ],
   imports: [
     BrowserModule,

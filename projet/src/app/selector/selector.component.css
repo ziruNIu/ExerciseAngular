@@ -1,9 +1,11 @@
 #resumeDescrip{
+    background-color: gray;
+    width: 200px;
     height: 300px;
-    width: 85%;
-    display:block;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+  
 }
 mat-grid-tile{
     display: flex;
@@ -11,7 +13,7 @@ mat-grid-tile{
     align-items: center;
     border-color: black;
     border: solid;
-    background-color: yellowgreen;
+
 
 }
 ​
@@ -50,8 +52,4 @@ h3{
 ​
 p{
     text-align: center;
-}
-app-product{
-    width: 500px;
-    height: 500px;
 }

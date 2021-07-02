@@ -1,0 +1,11 @@
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottomBlock{
+    width:80%
+}
+.topBlock{
+    width: 100%;
+}

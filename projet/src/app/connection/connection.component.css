@@ -1,22 +1,22 @@
 
-#all {
+.container {
     font: normal;
     display: flex; 
     box-sizing: border-box;
     height: 100%;
     width: 100%;
 }
-.leftImage{
+.left-image{
     width: 30%;
     height: 100%;
     overflow-x: hidden;
 }
-.leftImage > img {
+.left-image > img {
     height: 100%;
     transform: translateX(-2210px); 
 }
 
-.rightBlock{
+.right-block{
     position: relative;
     display: flex;
     justify-content: center;
@@ -66,7 +66,7 @@
     border-radius: 4px;
 }
 
-#continueButton {
+.continue-button {
     /* height */
     box-sizing: border-box;
     width: 100%;
