@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
 }
-.bottomBlock{
+.bottom-block{
     width:80%
 }
-.topBlock{
+.top-block{
     width: 100%;
 }
