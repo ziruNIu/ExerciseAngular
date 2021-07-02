@@ -7,9 +7,9 @@ import { Input } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() libelle ?: string;
-  @Input() image ?: string;
-  @Input() price ?: string;
+  @Input() libelle = "";
+  @Input() image = "";
+  @Input() price = "";
 
   constructor() { }
 
